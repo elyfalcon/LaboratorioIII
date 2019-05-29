@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h2>Materias</h2>
+        <u1 id="Lista"><!---comentario -->
+            <li>Programacion III</li>
+            <li>Laboratorio III</li>
+            <li>Base de Datos</li>
+        </u1>
+        
+
+    </div>
+    <p><input type="button" value="ejecutar" id="btnRun"></p>
+    <script>
+    var boton;
+    window.addEventListener('load',function(){
+
+        boton=document.getElementById('btnRun');
+        boton.addEventListener('click',ejecutar,false);
+    },false);
+    function ejecutar()
+    {
+        alert("Hola mundo");
+        var lista=document.getElementById('Lista');
+       // console.log(lista.childNodes.length);
+      // console.log(lista.childElementCount);
+     //  console.log(lista.children);
+       var hijos=lista.childNodes;
+       for(var i=0; i<hijos.length;i++)
+       {
+           if(hijos[i].nodeType==Node.ELEMENT_NODE){
+           console.log(hijos[i]);}
+       }
+
+
+    }
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+  
+    
+    <p id="p1">Esto es un parrafo 1</p>
+    
+    <p><input type="button" value="ejecutar" id="btnRun"></p>
+    <p><input type="button" value="ejecutar2" id="btnRun2"></p>
+    <script>
+    var boton;
+    var boton2;
+    var contador=0;
+    window.addEventListener('load',function(){
+
+        boton=document.getElementById('btnRun');
+        boton.addEventListener('click',ejecutar,false);
+        boton2=document.getElementById('btnRun2');
+        boton2.addEventListener('click',ejecutar2,false);
+    },false,false);
+
+    function ejecutar(){
+   
+       var parrafo=document.getElementById('p1');
+        var nodoTexto=document.createTextNode("  Hola mundo"+contador);
+        contador ++;
+        parrafo.appendChild(nodoTexto);
+        console.log(parrafo.childNodes.length);
+   
+    }
+    function ejecutar2()
+    {
+        var parrafo=document.getElementById('p1');
+        //console.log()
+        if(parrafo.hasChildNodes()){
+            parrafo.removeChild(parrafo.fistChild);
+        }
+        
+    }
+   
+    
+    </script>
+    
+</body>
+</html>

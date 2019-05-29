@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+  
+    <div id="miDiv">
+    <p>Esto es un parrafo 1</p>
+    <p>Esto es un parrafo 2</p>
+    <p>Esto es un parrafo 3</p>
+    <p>Esto es un parrafo 4</p>
+    <p>Esto es un parrafo 5</p>
+    <p>Esto es un parrafo 6</p>
+    <p>Esto es un parrafo 7</p>
+    </div>
+    <p><input type="button" value="ejecutar" id="btnRun"></p>
+    <script>
+    var boton;
+    window.addEventListener('load',function(){
+
+        boton=document.getElementById('btnRun');
+        boton.addEventListener('click',ejecutar,false);
+    },false);
+
+    function ejecutar(){
+   var div=document.getElementById('miDiv');
+   var primerHijo= div.firstElementChild;
+   var ultimoHijo= div.lastChild;
+  var hermano=primerHijo.nextElementSibling;
+  // console.log(primerHijo.childNodes.length);
+  // console.log(primerHijo.childNodes[0].nodeValue);
+   //console.log(primerHijo.textContent);
+  // console.log(hermano);
+   while(ultimoHijo){
+      // console.log(primerHijo.nextElementSibling);
+      // console.log(ultimoHIjo.textContent);
+       ultimoHijo.textContent= ultimoHijo.textContent + '.!';
+       ultimoHijo=ultimoHijo.previousElementSibling;
+
+   }
+    }
+
+   
+    
+    </script>
+    
+</body>
+</html>
