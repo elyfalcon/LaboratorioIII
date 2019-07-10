@@ -1,0 +1,177 @@
+body
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: grey;
+    box-sizing: content-box;
+}
+
+#tablaHeroes, #headerTabla, .tableRow, .tableRow td, #headerTabla th,#tablaHeroes td
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5em;
+}
+
+
+
+#info
+{
+    position: fixed;
+	top: 50%;
+	left: 40%;	
+    height: 100px;
+    text-align: left;
+	border: 2px;
+    width: 300px;
+    height: 300px;
+	visibility:true;
+	
+	
+}
+
+header>div>button
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+
+button
+{
+    border:none;
+    padding: 1em;
+}
+
+#btnAgregar
+{
+    background-color: red;
+    transition: background-color 0.5s ease-in-out;
+}
+
+#btnAgregar:hover
+{
+    background-color: rgb(0, 255, 0);
+}
+
+header>img, #spinner
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+
+#tablaForm td
+{
+    text-align: left;
+    max-width: 30%;
+    width: 30%;
+}
+
+.btnForm
+{
+    /*display:block;*/
+    width: 100%;
+    background-color: red;
+    transition: background-color 1s ease-in-out;
+    border-radius: 10%;
+}
+
+.inputForm:hover
+{
+    border: .2em solid black;
+    transition: border 1s ease-in-out;
+}
+
+.btnForm:hover
+{
+    background-color: orangered;
+}
+
+#tablaForm
+{
+    top: 1em;
+    background-color: orange;
+}
+
+#tablaHeroes,#tablaForm
+{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#headerTabla
+{
+    background-color: greenyellow;
+}
+
+.tableRow
+{
+    background-color: orange;
+    transition: background-color 1s ease-in-out;
+}
+
+.tableRow:hover
+{
+    background-color: red;
+}
+
+.altaForm {
+    text-align: left;
+    width: 400px;
+    border-collapse: collapse;
+    vertical-align: center;
+    align-items: center;
+    height: 300px;
+}
+
+.formGOT{
+    text-align: left;
+    width: 400px;
+    border-collapse: collapse;
+    vertical-align: center;
+    align-items: center;
+
+
+}
+
+
+
+/*---------------------------------------------------------------------------------------------------------------*/
+#spinner {
+    display: inline-block;
+    position: block;
+    width: 64px;
+    height: 64px;
+  }
+  #spinner div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 51px;
+    height: 51px;
+    margin: 6px;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    animation: spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+  }
+  #spinner div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  #spinner div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  #spinner div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
