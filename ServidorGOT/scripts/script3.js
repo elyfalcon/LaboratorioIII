@@ -117,8 +117,10 @@ function crearForm()
     var div = document.getElementById("info");
     div.appendChild(form);
     form.id='formGOT';
+    form.className='formGOT';
     console.log("crear form");
     //creo un fieldset
+    var fset = document.createElement("FIELDSET");
     var txtNombre = document.createElement("input");
     txtNombre.id='nombre';
     txtNombre.name='nombre';
@@ -142,6 +144,9 @@ function crearForm()
     labEdad.htmlFor="edad";
     labEdad.innerHTML="Edad: ";
     labEdad.appendChild(txtEdad);
+    fset.appendChild(txtNombre);
+    div.appendChild(fset);
+ //   document.y.appendChild(fset);
 
     //creo los radiobotton
     var radioTargaryen = document.createElement("input");
@@ -183,6 +188,7 @@ function crearForm()
     btnCancelar.setAttribute("value", "Cancelar");
     
     form.appendChild(radioLannister);
+    form.appendChild(agregarSalto())
     form.appendChild(radioStark);
     form.appendChild(radioTargaryen);
     form.appendChild(btnCancelar);
